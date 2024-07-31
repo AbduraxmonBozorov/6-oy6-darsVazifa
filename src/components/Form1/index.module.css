@@ -25,5 +25,9 @@ p{
 }
 
 .form button{
-    
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
