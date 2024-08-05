@@ -32,17 +32,23 @@ function Form3() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <input ref={startRef} type="number" name="" id="" />
         <input ref={endRef} type="number" name="" id="" />
         <button onClick={handleFilter}>Filter</button>
       </div>
-      {
-        filterData.length>0 && filterData.map((item, ind)=>{
-          return (<Card key={ind} data={item} />)
-        })
-      } 
+      <div className={styles.data}>
+        {
+          filterData.length<=0 && <h1>No data</h1>
+        }
+        {
+          filterData.length>0 && filterData.map((item, ind)=>{
+            return (<Card key={ind} data={item} />)
+          }) 
+        } 
+      </div>
+      
     </div>
   )
 }
